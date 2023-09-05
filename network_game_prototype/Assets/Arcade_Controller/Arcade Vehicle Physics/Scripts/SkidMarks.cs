@@ -33,6 +33,8 @@ namespace ArcadeVP
         // Update is called once per frame
         void FixedUpdate()
         {
+            //if(!IsOwner) { return; }
+
             if (carController.grounded())
             {
 
