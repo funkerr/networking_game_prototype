@@ -47,7 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337f33b3654d9a4fa8f2d3f24ceb6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skidMark: {fileID: 0}
   carController: {fileID: 3642682506295484691}
+  skidMaterialDirt: {fileID: 0}
 --- !u!96 &3642682506242097196
 TrailRenderer:
   serializedVersion: 3
@@ -5401,7 +5403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337f33b3654d9a4fa8f2d3f24ceb6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skidMark: {fileID: 3642682506562557168}
   carController: {fileID: 3642682506295484691}
+  skidMaterialDirt: {fileID: 2100000, guid: a09c5597d94b3104eaee2b62abbf6c7c, type: 2}
 --- !u!96 &3642682506562557168
 TrailRenderer:
   serializedVersion: 3
@@ -10302,7 +10306,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337f33b3654d9a4fa8f2d3f24ceb6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skidMark: {fileID: 0}
   carController: {fileID: 3642682506295484691}
+  skidMaterialDirt: {fileID: 0}
 --- !u!96 &3642682506704402854
 TrailRenderer:
   serializedVersion: 3
@@ -15775,7 +15781,6 @@ GameObject:
   - component: {fileID: 3642682507613588604}
   - component: {fileID: 3642682507613588603}
   - component: {fileID: 3642682507613588602}
-  - component: {fileID: 2703534390359253876}
   m_Layer: 8
   m_Name: Skid marks FL
   m_TagString: Untagged
@@ -15810,7 +15815,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337f33b3654d9a4fa8f2d3f24ceb6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skidMark: {fileID: 3642682507613588604}
   carController: {fileID: 3642682506295484691}
+  skidMaterialDirt: {fileID: 2100000, guid: a09c5597d94b3104eaee2b62abbf6c7c, type: 2}
 --- !u!96 &3642682507613588604
 TrailRenderer:
   serializedVersion: 3
@@ -15863,7 +15870,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.15713882
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -15875,7 +15882,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.6226415, g: 0.032306872, b: 0.032306872, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -15900,7 +15907,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -20632,36 +20639,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &2703534390359253876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3642682507613588600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df2868252ab5c4d1da357e8f11f1b524, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  UseQuaternionSynchronization: 0
-  UseQuaternionCompression: 0
-  UseHalfFloatPrecision: 0
-  InLocalSpace: 0
-  Interpolate: 1
-  SlerpPosition: 0
 --- !u!1 &3642682507769301484
 GameObject:
   m_ObjectHideFlags: 0

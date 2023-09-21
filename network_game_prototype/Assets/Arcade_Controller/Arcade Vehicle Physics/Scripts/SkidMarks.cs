@@ -7,10 +7,14 @@ namespace ArcadeVP
 {
     public class SkidMarks : NetworkBehaviour
     {
-        private TrailRenderer skidMark;
+        public TrailRenderer skidMark;
         private ParticleSystem smoke;
         public ArcadeVehicleController carController;
         float fadeOutSpeed;
+
+
+        public Material skidMaterialDirt;
+
         private void Awake()
         {
             smoke = GetComponent<ParticleSystem>();
@@ -89,7 +93,7 @@ namespace ArcadeVP
                 if (Mathf.Abs(carController.carVelocity.x) > 10)
                 {
                     fadeOutSpeed = 0f;
-                    skidMark.materials[0].color = Color.black;
+                    skidMark.materials[0].color = new Color(178, 5, 5, .3f);
                     skidMark.emitting = true;
                 }
                 else
@@ -104,12 +108,12 @@ namespace ArcadeVP
             }
             if (!skidMark.emitting)
             {
-                fadeOutSpeed += Time.deltaTime / 2;
-                Color m_color = Color.Lerp(Color.black, new Color(0f, 0f, 0f, 0f), fadeOutSpeed);
-                skidMark.materials[0].color = m_color;
-                if (fadeOutSpeed > 1)
+                //fadeOutSpeed += Time.deltaTime / 2;
+                //Color m_color = Color.Lerp(Color.blue, new Color(0f, 0f, 0f, 0f), fadeOutSpeed);
+                //skidMark.materials[0].color = m_color;
+                //if (fadeOutSpeed > 1)
                 {
-                    skidMark.Clear();
+                //    skidMark.Clear();
                 }
             }
 
