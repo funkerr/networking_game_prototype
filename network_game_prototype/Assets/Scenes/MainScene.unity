@@ -3273,6 +3273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e6258bbeb210ad4fa491d2f0e4e8264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lobbyHeartBeatTimer: 0
+  lobbyHeartBeatTimerMax: 30
 --- !u!4 &1630776549
 Transform:
   m_ObjectHideFlags: 0
