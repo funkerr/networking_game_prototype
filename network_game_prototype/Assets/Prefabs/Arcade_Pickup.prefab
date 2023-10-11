@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 647938339431647437}
   - component: {fileID: -8153974380088276041}
   - component: {fileID: 25346293804557460}
+  - component: {fileID: 8377594522660155904}
   m_Layer: 7
   m_Name: Arcade_Pickup
   m_TagString: Untagged
@@ -214,7 +215,7 @@ MonoBehaviour:
   drivableSurface:
     serializedVersion: 2
     m_Bits: 64
-  MaxSpeed: 50
+  MaxSpeed: 55
   accelaration: 20
   turn: 10
   gravity: 7
@@ -587,6 +588,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 2699188840923956060}
+--- !u!114 &8377594522660155904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642682506295484703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb4f534bc524b243ba105eb8513ffbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3642682506498412658
 GameObject:
   m_ObjectHideFlags: 0
