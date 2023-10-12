@@ -8,6 +8,15 @@ public class carUpgrades
     public int itemID;
     public string name;
     public GameObject itemPrefab;
+    public GameObject myPrefab;
+
+    public carUpgrades(int itemID, string name)
+    {
+        this.itemID = itemID;
+        this.name = name;
+        //this.itemPrefab = itemPrefab;
+
+    }
 
 }
 
@@ -26,8 +35,8 @@ public class Upgrades : MonoBehaviour
 
     void Start()
     {
-        _nitro = new carUpgrades();
-        Debug.Log(_nitro.itemID + _nitro.name);
+       _nitro = new carUpgrades(1, "Nitro");
+        Debug.Log(_nitro);
     }
 
     // Update is called once per frame

@@ -24,9 +24,10 @@ public class LevelBoostScript : NetworkBehaviour
         //Debug.Log(other);
         if (other.gameObject.tag == "boost")
         {
-            Debug.Log(other.gameObject.tag);
-            myAVC.GetComponent<Rigidbody>().AddForce(Vector3.right * impusleForce ,ForceMode.Impulse);
-            Debug.Log("added force");
+            
+            myAVC.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * impusleForce ,ForceMode.Impulse);
+            //adds force to relative or local position > working decently for now
+            
         }
     }
 

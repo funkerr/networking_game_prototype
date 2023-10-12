@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 25346293804557460}
   - component: {fileID: 8377594522660155904}
   - component: {fileID: -3698310473701842928}
+  - component: {fileID: -5339658592817438118}
   m_Layer: 7
   m_Name: Arcade_Pickup
   m_TagString: Player
@@ -614,7 +615,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAVC: {fileID: 3642682506295484691}
-  impusleForce: 50
+  impusleForce: 55
+--- !u!114 &-5339658592817438118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642682506295484703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b5d0cb52679d3b4eb62f50f3dec9254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostCount: 0
+  moneyCount: 0
 --- !u!1 &3642682506498412658
 GameObject:
   m_ObjectHideFlags: 0
