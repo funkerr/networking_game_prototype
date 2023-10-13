@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
 
-public class CollectBoost : NetworkBehaviour
+public class CollecMoney : NetworkBehaviour
 {
     public ArcadeVehicleController _myAVC;
     
-    public Inventory _inventory;
+    private Inventory _inventory;
 
 
 
@@ -21,22 +21,22 @@ public class CollectBoost : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.B))
+        if(Input.GetKeyDown(KeyCode.M))
         {
-            Debug.Log("Boost count is " + _inventory.boostCount);
+            Debug.Log("Money count is " + _inventory.moneyCount);
 
         }
     }
 
     private void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Picked up Boost");
+        Debug.Log("Picked up Money");
 
         if (col.gameObject.tag == "Player")
         {
             //_myAVC.GetComponent<Inventory>().boostCount ++;
-            _inventory.boostCount++;
-            Debug.Log(_myAVC.GetComponent<Inventory>().boostCount);
+            _inventory.moneyCount += 100;
+            Debug.Log(_myAVC.GetComponent<Inventory>().moneyCount);
 
             //testing class from inventory - prob not working
             // _myAVC.GetComponent<Inventory>().PlayerItemsCount._moneyCount++;

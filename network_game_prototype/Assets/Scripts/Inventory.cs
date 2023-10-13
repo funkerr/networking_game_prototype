@@ -2,41 +2,41 @@ using ArcadeVP;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class ItemsCount
-{
-    public float _boostCount;
-    public float _moneyCount;
+//Testing class stuff, confused atm
 
-    public ItemsCount(float _boostCount, float _moneyCount) 
+//public class ItemsCount
+//{
+//    public float _boostCount;
+//    public float _moneyCount;
+
+//    public ItemsCount(float _boostCount, float _moneyCount) 
     
-    { 
+//    { 
 
-        this._boostCount= _boostCount;
-        this._moneyCount= _moneyCount;
+//        this._boostCount= _boostCount;
+//        this._moneyCount= _moneyCount;
 
-    }
+//    }
 
-}
-public class Inventory : MonoBehaviour
+//}
+public class Inventory : NetworkBehaviour
 {
     
 
-    public float boostCount;
-    public float moneyCount;
-
-    public ItemsCount PlayerItemsCount;
-
+    public int boostCount=0;
+    public int moneyCount=0;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-         PlayerItemsCount = new ItemsCount(0, 0);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+      boostCount = 0;
+      moneyCount = 0;
+
     }
 }
+
