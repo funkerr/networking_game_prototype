@@ -7,6 +7,7 @@ using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using UnityEditor.Rendering;
 using Newtonsoft.Json.Bson;
+using QFSW.QC;
 
 public class TestLobby : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class TestLobby : MonoBehaviour
 
     }
 
+    [Command]
     public async void CreateLobby()
     {
         try
