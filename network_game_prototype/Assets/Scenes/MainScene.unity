@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.11267747, g: 0.28153953, b: 0.7091793, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8380,7 +8380,7 @@ MonoBehaviour:
   hostButton: {fileID: 1320196959}
   clientButton: {fileID: 1855441846}
   createLobbyButton: {fileID: 1534106978}
-  myLobbyScript: {fileID: 1630776548}
+  myLobbyScript: {fileID: 0}
 --- !u!1001 &944838566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13999,7 +13999,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1630776549}
-  - component: {fileID: 1630776548}
+  - component: {fileID: 1630776551}
+  - component: {fileID: 1630776550}
   m_Layer: 0
   m_Name: LobbyManager
   m_TagString: Untagged
@@ -14007,20 +14008,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1630776548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1630776547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e6258bbeb210ad4fa491d2f0e4e8264, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lobbyHeartBeatTimer: 0
-  lobbyHeartBeatTimerMax: 30
 --- !u!4 &1630776549
 Transform:
   m_ObjectHideFlags: 0
@@ -14036,6 +14023,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 403848327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1630776550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630776547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 4272282795
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &1630776551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630776547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ea6b0212a66d24e8b2500f4d523c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lobbyHeartBeatTimer: 0
+  lobbyHeartBeatTimerMax: 0
+  playerName: 
 --- !u!1 &1633897997
 GameObject:
   m_ObjectHideFlags: 0
