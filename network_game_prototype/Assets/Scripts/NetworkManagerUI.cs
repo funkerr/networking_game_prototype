@@ -12,7 +12,7 @@ public class NetworkManagerUI : MonoBehaviour
     public Button clientButton;
     public Button createLobbyButton;
 
-    public TestLobby myLobbyScript;
+    public TestLobby_2 myLobbyScript;
     private void Awake()
     {
         serverButton.onClick.AddListener(() =>
