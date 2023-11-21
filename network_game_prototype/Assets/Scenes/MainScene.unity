@@ -10714,6 +10714,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4845276930943762971, guid: 2da3dcc22749e7f4280737786d898334,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845276930943762971, guid: 2da3dcc22749e7f4280737786d898334,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.000091552734
       objectReference: {fileID: 0}
@@ -14633,8 +14638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ea6b0212a66d24e8b2500f4d523c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobbyHeartBeatTimer: 0
-  lobbyHeartBeatTimerMax: 0
+  lobbyHeartBeatTimer: 300
+  lobbyHeartBeatTimerMax: 5
   playerName: 
 --- !u!1 &1633897997
 GameObject:

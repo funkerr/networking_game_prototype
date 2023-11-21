@@ -35,7 +35,7 @@ public class TestLobby_2 : NetworkBehaviour
         playerName = "DirtRacer" + UnityEngine.Random.Range(1, 10);
         Debug.Log(playerName);
     }
-
+    [Command]
     public async void CreateLobby()
     {
         try
@@ -109,7 +109,7 @@ public class TestLobby_2 : NetworkBehaviour
     }
 
     ////JOINING FIRST LOBBY AVAILABLE
-   
+
     //public async void JoinLobby()
     //{
     //    //QueryResponse queryResponse = await Lobbies.Instance.QueryLobbiesAsync();
@@ -120,6 +120,7 @@ public class TestLobby_2 : NetworkBehaviour
     //}
 
     //JOINING LOBBY BY CODE FUNCTION
+    [Command]
     public async void JoinLobbyByCode(string _lobbyCode)
     {
         JoinLobbyByCodeOptions joinLobbyByCodeOptions = new JoinLobbyByCodeOptions
@@ -174,7 +175,7 @@ public class TestLobby_2 : NetworkBehaviour
         await LobbyService.Instance.QuickJoinLobbyAsync();
         Debug.Log("Quick Joined Lobby: " + hostLobby.Name);
     }
-
+    [Command]
     private void PrintPlayerData()
     {
         PrintPlayerData(joinedLobby);
