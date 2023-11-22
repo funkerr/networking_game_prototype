@@ -70,6 +70,7 @@ public class TestLobby_2 : NetworkBehaviour
         }
     }
 
+    [Command]
     public async void ListLobbies()
     {
         QueryLobbiesOptions queryLobbiesOptions = new QueryLobbiesOptions
