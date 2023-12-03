@@ -9,11 +9,21 @@ using QFSW.QC;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport.Relay;
+using TMPro;
+
 
 public class TestRelay_2 : MonoBehaviour
 {
+
+    public string lobbyString;
+    public NetworkManagerUI myNetworkManagerUIRef;
+
+    public TMP_Text myLobbyCodeTextRef;
+
     // Start is called before the first frame update
-    private async void Start()
+
+    // made these public for now
+    public async void Start()
     {
        await UnityServices.InitializeAsync();
 
@@ -23,19 +33,21 @@ public class TestRelay_2 : MonoBehaviour
         };
     }
     [Command]
-    private async void CreateRelay()
+    public async void CreateRelay()
     {
         try 
         {
             Allocation allocation = await RelayService.Instance.CreateAllocationAsync(5);
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
             Debug.Log(joinCode);
+            lobbyString= joinCode;
 
             //Create Relay using relay transport on network manager
             //Starts Host
             RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
             NetworkManager.Singleton.StartHost();
+            myLobbyCodeTextRef.text =  lobbyString;
         }
         catch(RelayServiceException e)
         {
